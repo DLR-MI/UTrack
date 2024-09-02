@@ -1,0 +1,5 @@
+python tools/convert_mot17_to_coco.py
+python tools/convert_mot20_to_coco.py
+python tools/convert_crowdhuman_to_coco.py
+python tools/convert_cityperson_to_coco.py
+python tools/convert_ethz_to_coco.py

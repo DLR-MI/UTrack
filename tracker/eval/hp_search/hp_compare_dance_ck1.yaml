@@ -1,0 +1,116 @@
+msg: 
+  type: static
+  values: Running bytetrack baseline
+data:
+  val_ann:
+    type: static
+    values: val.json
+yolo:
+  conf:
+    type: static
+    values: 0.01
+  iou:
+    type: static
+    values: 0.7
+  augment:
+    type: static
+    values: False
+  imgsz:
+    type: static
+    values: [800, 1440]
+  device:
+    type: static
+    values: 1
+  half:
+    type: static
+    values: True
+  save:
+    type: static
+    values: False
+  verbose:
+    type: static
+    values: False
+tracker:
+  association:
+    type: discrete
+    values: 
+      - botsort
+      - uk_botsort
+      - us_botsort
+      - up_botsort
+  camera_motion:
+    method:
+      type: static
+      values: null
+    all_levels:
+      type: static
+      values: False
+    doppler2phase: 
+      type: static
+      values: False
+  uncertain:
+    kalman:
+      measurements:
+        type: static
+        values: False
+      on_ground:
+        type: static
+        values: False
+      nsa:
+        type: static
+        values: True
+    std_iou:
+      type: static
+      values: auto
+    mask_distance:
+      type: static
+      values: False
+  thresholds:
+    data:
+        type: static
+        values: dancetrack
+    scores:
+      low:
+        type: static
+        values: 0.1
+      high:
+        type: static
+        values: 0.6
+      bins:
+        type: static
+        values: 2
+      new_track:
+        type: static
+        values: 0.7
+      confirm:
+        type: static
+        values: 0.7
+    matching:
+      distance:
+        type: static
+        values: [0.8, 0.5]
+      fuse_scores:
+        type: static
+        values: [True, False]
+      u_levels:
+        type: static
+        values: 1
+    pseudo_depth:
+      add:
+        type: static
+        values: False
+      depths:
+        type: static
+        values: [3, 3]
+  min_box_area:
+    type: static
+    values: 10
+  frame_rate:
+    type: static
+    values: 30
+  track_buffer:
+    type: static
+    values: 60
+  mot20:
+    type: static
+    values: False

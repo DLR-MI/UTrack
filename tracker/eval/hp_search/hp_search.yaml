@@ -1,0 +1,124 @@
+msg: 
+  type: static
+  values: Running bytetrack baseline
+data:
+  val_ann:
+    type: static
+    values: train.json
+yolo:
+  conf:
+    type: static
+    values: 0.01
+  iou:
+    type: static
+    values: 0.7
+  augment:
+    type: static
+    values: False
+  imgsz:
+    type: static
+    values: [800, 1440]
+  device:
+    type: static
+    values: 1
+  half:
+    type: static
+    values: True
+  save:
+    type: static
+    values: False
+  verbose:
+    type: static
+    values: False
+tracker:
+  association:
+    type: static
+    values: byte
+  camera_motion:
+    method:
+      type: static
+      values: null
+    all_levels:
+      type: discrete
+      values:
+        - True
+        - False
+  uncertain:
+    kalman:
+      measurements:
+        type: static
+        values: False
+      on_ground:
+        type: static
+        values: False
+      nsa:
+        type: static
+        values: False
+    std_iou:
+      type: static
+      values: auto
+    mask_distance:
+      type: static
+      values: False
+  thresholds:
+    data:
+      type: static
+      values: ablation_17
+    scores:
+      low:
+        type: continuous
+        min: 0.1
+        max: 0.3
+        step: 0.1
+      high:
+        type: continuous
+        min: 0.6
+        max: 0.8
+        step: 0.1
+      bins:
+        type: static
+        values: 2
+      new_track:
+        type: continuous
+        min: 0.7
+        max: 0.8
+        step: 0.1
+      confirm:
+        type: continuous
+        min: 0.7
+        max: 0.8
+        step: 0.1
+    matching:
+      distance:
+        type: discrete
+        values:
+          - [0.7, 0.5]
+          - [0.8, 0.5]
+      fuse_scores:
+        type: discrete
+        values:
+          - [True, False]
+      u_levels:
+        type: discrete
+        values:
+          - 1
+          - all
+    pseudo_depth:
+      add:
+        type: static
+        values: False
+      depths:
+        type: static
+        values: [3, 3]
+  min_box_area:
+    type: static
+    values: 10
+  frame_rate:
+    type: static
+    values: 30
+  track_buffer:
+    type: static
+    values: 30
+  mot20:
+    type: static
+    values: False

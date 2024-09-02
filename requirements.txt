@@ -1,0 +1,11 @@
+lap==0.4.0
+opencv-python-headless
+omegaconf==2.3.0
+motmetrics==1.4.0
+dash==2.15.0
+dash-ace==0.2.1
+git+https://github.com/DLR-MI/fuzzy_cython_bbox.git
+git+https://github.com/DLR-MI/nms_var.git
+git+https://github.com/DLR-MI/fast_gmc.git
+git+https://github.com/DLR-MI/ultralytics.git@nms-var
+git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI

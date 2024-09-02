@@ -1,0 +1,1 @@
+python track.py --exp mix_17_fix --data_root /data/MOT17 --config ./tracker/config/track_mix_17.yaml --association madeep --split_to_eval train --submit_mot True --seed 3

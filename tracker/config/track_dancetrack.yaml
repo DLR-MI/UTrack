@@ -1,0 +1,51 @@
+msg: bytetrack with gmc, uncertainty, and phase (~PhaseTrack)
+data:
+  val_ann: val.json # change to test.json when running on test set
+yolo:
+  conf: 0.01
+  iou: 0.7
+  augment: False
+  imgsz:
+    - 800
+    - 1440
+  device: 1
+  half: True # fp16
+  save: False
+  verbose: False
+tracker:
+  association: byte          # [byte, ubyte, botsort, deep, kcm, ucmc, phase]
+  camera_motion:
+    method: null             # [gmc, fast-gmc, kcm, null]
+    all_levels: False
+    doppler2phase: False
+  uncertain:
+    kalman:
+      measurements: False
+      on_ground: False
+      nsa: False
+    std_iou: auto            # [float, 'auto']
+    mask_distance: False
+  thresholds:
+    scores:
+      low: 0.1
+      high: 0.6
+      bins: 2                 # [int, list, 'auto']
+      new_track: 0.7          # original: scores.high + 0.1
+      confirm: 0.8
+    matching:
+      distance:                     # dist=iou: original values from ByteTrack
+        - 0.8
+        - 0.5                  # 0.3 in SparseTrack
+      fuse_scores:             # original values from ByteTrack
+        - True
+        - False
+      u_levels: 1              # [int, all]: Original = 1
+    pseudo_depth:
+      add: False               
+      depths:
+        - 3
+        - 3
+  min_box_area: 10
+  frame_rate: 20
+  track_buffer: 60           # for max_time_lost
+  mot20: False

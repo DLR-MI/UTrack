@@ -1,0 +1,52 @@
+msg: Baseline configuration
+data:
+  val_ann: train_half.json # change to test.json when running on test set
+yolo:
+  conf: 0.01
+  iou: 0.7
+  augment: False
+  imgsz:
+    - 896
+    - 1600
+  device: 1
+  half: True # fp16
+  save: False
+  verbose: False
+tracker:
+  association: byte          
+  camera_motion:
+    method: null             # [gmc, fast-gmc, kcm, null]
+    all_levels: False
+    doppler2phase: False
+  uncertain:
+    kalman:
+      measurements: False
+      on_ground: False
+      nsa: True
+    std_iou: auto            # [float, 'auto'] 
+    mask_distance: False 
+  thresholds:
+    data: mix_20
+    scores:
+      low: 0.1
+      high: 0.6
+      bins: 2                 # [int, list, 'auto']
+      new_track: 0.7          
+      confirm: 0.7
+    matching:                 
+      distance:                   
+        - 0.7                 
+        - 0.5                  
+      fuse_scores:            
+        - True
+        - False
+      u_levels: 1              # [int, all]: Original = 1 
+    pseudo_depth: 
+      add: False               
+      depths:                  
+        - 3
+        - 3
+  min_box_area: 100
+  frame_rate: 30
+  track_buffer: 60         
+  mot20: True
