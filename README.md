@@ -95,10 +95,10 @@ The model weights used for the experiments in the paper can be downloaded below.
 | DanceTrack |  [[download]](https://zenodo.org/records/13604403/files/dancetrack_best.pt?download=1) |
 | KITTI |  [[download]](https://zenodo.org/records/13604403/files/kitti_best.pt?download=1) |
 
-After downloading, rename to `best.pt` and place it within the corresponding folder in `./yolov8l-mix`. Note that KITTI was only trained for the pedestrian class.
+After downloading, rename to `best.pt` and place it within the corresponding folder in `./yolov8l-mix/EXP/weights`, where `EXP` is the experiment name referred to during training (i.e. `mix_17`, `ablation_17`, etc.) Note that KITTI was only trained for the pedestrian class.
 
 ## Evaluation
-For tracking, you just need to modify `./tracker/config/track_EXP.yaml` where `EXP` is the experiment referred to during training (i.e. `mix_17`, `ablation_17`, etc.). 
+For tracking, you just need to modify `./tracker/config/track_EXP.yaml` if considering different tracker parameters, where `EXP` is the experiment name. 
 
 ```shell
 $ python track.py --project yolov8l-mix --exp ablation_17 --data_root /data/MOT17 --association uk_botsort
