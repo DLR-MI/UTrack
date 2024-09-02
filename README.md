@@ -65,10 +65,10 @@ bash tools/convert_datasets_to_coco.sh
 bash tools/mix_data_for_training.sh
 ```
 
-If you use another path for the data, make sure to change the `DATA_PATH` in the scripts invoked above. To clip the annotated bounding boxes to the image, run
+If you use another path for the data, make sure to change the `DATA_PATH` in the scripts invoked above. To clip the annotated bounding boxes to the image, run (e.g. for MOT17)
 
 ```shell
-python tools/fix_yolo_annotations.py
+python tools/fix_yolo_annotations.py --folder /data/MOT17
 ```
 
 For [DanceTrack](https://dancetrack.github.io/) and [KITTI](https://www.cvlibs.net/datasets/kitti/eval_tracking.php), you can also find scripts in `./tools` to convert to the COCO format. No mixing is necessary here. 
