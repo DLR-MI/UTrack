@@ -28,7 +28,7 @@ such as MOT17, MOT20, DanceTrack, and KITTI.
 
 ## Highlights 🚀
 
-- YOLOv8 support using a fork of [Ultralytics](https://github.com/ultralytics/ultralytics)
+- YOLOv8 support using a fork of [Ultralytics](https://github.com/DLR-MI/ultralytics/tree/nms-var)
 - Non maximum suppresion (NMS) with box variances using [NMS-var](https://github.com/DLR-MI/nms_var)
 - Fast camera motion compensation (affine & homography) using [FastGMC](https://github.com/DLR-MI/fast_gmc)
 - Estimates of errors in IoU using [fuzzy cython-bbox](https://github.com/DLR-MI/fuzzy_cython_bbox)
