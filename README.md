@@ -131,7 +131,7 @@ A demo can be run on a sample video from [Youtube](https://www.youtube.com/watch
 python ./tools/track_demo.py --exp dancetrack --association uk_botsort --video_path /path/to/video --output_path /path/to/output/video
 ```
 
-<img src="assets/dance_sample_track.gif" width="480"/>
+<img src="assets/dance_sample_track.gif" width="400"/>
 
 
 ## Citation
