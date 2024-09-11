@@ -46,7 +46,7 @@ class STrack(BaseTrack):
         self.tracklet_len = 0
         
         config_path = Path(__file__).parent / 'config/utils'
-        if dataset.lower() != 'kitti': # FIXME: find calib data for kitti
+        if dataset is not None and dataset.lower() != 'kitti': # FIXME: find calib data for kitti
             cam_para_file = config_path / f'cam_para/{dataset}/{seq}.txt'
             # Original mapping is modified to include "measurement" of R^uv
             self.ground_mapper = Mapper(cam_para_file, dataset)

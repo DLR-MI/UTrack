@@ -1,7 +1,7 @@
 
 # UTrack
 
-[![arXiv](https://img.shields.io/badge/arXiv-2408.17098-<COLOR>.svg)](https://arxiv.org/abs/2408.17098)
+[![arXiv](https://img.shields.io/badge/arXiv-2408.17098-<COLOR>.svg)](https://arxiv.org/abs/2408.17098) [![License: MIT](https://img.shields.io/badge/License-AGPLv3-yellow.svg)](https://www.gnu.org/licenses/agpl-3.0) ![test](https://img.shields.io/static/v1?label=By&message=Pytorch&color=red)
 
 > [**UTrack: Multi-Object Tracking with Uncertain Detections**](https://arxiv.org/abs/2408.17098)
 > 
@@ -121,7 +121,17 @@ Just by adding (on top of BoT-SORT) the right observation noise in the Kalman fi
 | BoT-SORT | 53.8 | 77.8 | 37.3 | 89.7 | 56.1 |
 | UTrack | 55.8 | 79.4 | 39.3 | 89.7 | 56.4 |
 
-The evaluation runs at 27 FPS on a NVIDIA A100 GPU, compared with the 32 FPS of BoT-SORT in the same machine.
+The evaluation runs at **27 FPS** on a NVIDIA A100 GPU, compared with the 32 FPS of BoT-SORT in the same machine.
+
+### Demo
+
+A demo can be run on a sample video from [Youtube](https://www.youtube.com/watch?v=qv6gl4h0dvg) by executing
+
+```shell
+python ./tools/track_demo.py --exp dancetrack --association uk_botsort --video_path /path/to/video --output_path /path/to/output/video
+```
+
+<img src="assets/dance_sample_track.gif" width="640"/>
 
 
 ## Citation
