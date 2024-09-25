@@ -22,7 +22,7 @@ def make_parser():
     parser.add_argument("--config", type=str, default='./tracker/config/track_dancetrack.yaml',
                         help="path to config .yaml for the experiment")
     parser.add_argument("--video_path", type=str, help="path to input video")
-    parser.add_argument("--ouput_path", type=str, help="path to annotated video with tracks")
+    parser.add_argument("--output_path", type=str, help="path to annotated video with tracks")
     parser.add_argument("--gpu_id", type=int, default=3, help="cuda device")
     return parser.parse_args()
 
