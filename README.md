@@ -25,6 +25,11 @@ methods are introduced that leverage the proposed mechanism. We
 demonstrate the effectiveness of our contribution on a variety of benchmarks,
 such as MOT17, MOT20, DanceTrack, and KITTI.
 
+<img src="assets/dancetrack_var.gif" width="400"/>
+
+<span><span style="color: yellow;"> Bounding boxes with high variance</span> in regions with high occlusion </span>
+
+
 
 ## Highlights 🚀
 
