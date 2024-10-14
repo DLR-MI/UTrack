@@ -128,10 +128,10 @@ The evaluation runs at **27 FPS** on a NVIDIA A100 GPU, compared with the 32 FPS
 
 ### Demo
 
-A demo can be run on a sample video from [Youtube](https://www.youtube.com/watch?v=qv6gl4h0dvg) by executing
+A demo can be run on a sample video downloaded from [Youtube](https://www.youtube.com/watch?v=qv6gl4h0dvg) by executing
 
 ```shell
-python ./tools/track_demo.py --exp dancetrack --association uk_botsort --video_path /path/to/video --output_path /path/to/output/video
+python ./tools/track_demo.py --exp dancetrack --association uk_botsort --video_path /path/to/cropped_video --output_path /path/to/output/video
 ```
 
 <img src="assets/dance_sample_track.gif" width="400"/>
